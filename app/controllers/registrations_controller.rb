@@ -1,4 +1,4 @@
-class RegistrationsController < ApplicationController
+class RegistrationsController < Devise::RegistrationsController
   def update
     new_params = params.require(:user).permit(:email, :username, :current_password, :password, :password_confirmation)
     change_password = true
